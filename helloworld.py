@@ -1,4 +1,8 @@
 import sys
-# Get the name from the command-line argument, which is in the second position of the command-line argument
-name = sys.argv[1]
-print("Hello "+ name)
+
+if len(sys.argv) < 2:
+    print("Usage: python helloworld.py [name1] [name2] ... [nameN]")
+    sys.exit(1)
+
+for name in sys.argv[1:]:
+    print(f"Hello, {name}!")
